@@ -1,0 +1,21 @@
+CREATE TABLE Entity (
+  id INTEGER NOT NULL PRIMARY KEY,
+  name TEXT NOT NULL
+);
+
+selectAll:
+SELECT * FROM Entity;
+
+selectByName:
+SELECT * FROM Entity WHERE name = ?;
+
+insert:
+INSERT OR REPLACE INTO Entity(id, name) VALUES (?, ?);
+
+deleteAll:
+DELETE FROM Entity;
+
+update:
+UPDATE Entity
+SET name = ?
+WHERE id = ?;
